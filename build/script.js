@@ -192,7 +192,6 @@ clearEl.forEach(clear => {
         todoarr.forEach(todo => {
             if (todo.classList.contains('completed')) {
                 todo.remove()
-                console.log('remove')
             }
         })
     })
