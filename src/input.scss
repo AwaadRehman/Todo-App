@@ -1,0 +1,398 @@
+@import 'config';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Josefin Sans';
+    transition: 0.5s all ease;
+}
+
+body.dark {
+    background-color: $very-Dark-Blue;
+    color: white;
+
+    header {
+        background: url('/build/images/bg-desktop-dark.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    main {
+        .inputdiv {
+            background-color: $very-DarkDesaturated-Blue;
+        }
+
+        .todos {
+            background-color: $very-DarkDesaturated-Blue;
+
+            .todo {
+                border: 1px solid $very-DarkGrayish-Blue;
+
+                p {
+                    color: $Light-Grayish-Blue;
+                }
+            }
+        }
+
+        .mobileview {
+            background-color: $very-DarkDesaturated-Blue;
+            border: 1px solid $very-DarkGrayish-Blue;
+        }
+
+        .menu {
+            background-color: $very-DarkDesaturated-Blue;
+            border-top: 1px solid $very-DarkGrayish-Blue;
+        }
+    }
+
+    @media (max-width:600px) {
+        header {
+            background: url('/build/images/bg-mobile-dark.jpg');
+            background-size: cover;
+
+        }
+    }
+}
+
+body.light {
+    background-color: $LVery-Light-Grayish-Blue;
+    width: 100%;
+
+    header {
+        background: url('/build/images/bg-desktop-light.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    main {
+        .inputdiv {
+            background-color: $LVery-LightGray;
+
+            input {
+                color: $LDark-Grayish-Blue;
+            }
+        }
+
+        .todos {
+            background-color: $LVery-LightGray;
+
+            .todo {
+                border-top: 1px solid $LDark-Grayish-Blue;
+
+                p {
+                    color: $LDark-Grayish-Blue;
+                }
+            }
+        }
+
+        .mobileview {
+            background-color: $LVery-LightGray;
+            border-top: 1px solid $LDark-Grayish-Blue;
+        }
+
+        .menu {
+            background-color: $LVery-LightGray;
+            border-top: 1px solid $LDark-Grayish-Blue;
+        }
+    }
+
+    @media (max-width:600px) {
+        header {
+            background: url('/build/images/bg-mobile-light.jpg');
+            background-size: cover;
+        }
+    }
+}
+
+
+header {
+    // background: url('/build/images/bg-desktop-dark.jpg');
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    nav {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        width: 580px;
+
+        h1 {
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        img {
+            cursor: pointer;
+            width: 20px;
+        }
+
+        .toggle {
+            cursor: pointer;
+
+            img {
+                width: 20px;
+            }
+
+            .moon {
+                opacity: 0;
+                height: 0;
+                transform: translateX(0);
+                transition: 0.3s all ease;
+            }
+
+            .sun {
+                opacity: 0;
+                height: 0;
+                transform: translateX(30px);
+                transition: 0.3s all ease;
+            }
+
+            .sun.active {
+                opacity: 1;
+                height: auto;
+                transform: translateX(0);
+            }
+
+            .moon.active {
+                opacity: 1;
+                height: auto;
+                transform: translateX(27px);
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-150px);
+    width: 100vw;
+    min-height: 100vh;
+
+    .wrapper {
+        width: 580px;
+    }
+
+    .inputdiv {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        padding: 10px 5px;
+        margin-bottom: 20px;
+        transition: 0.5s background-color ease;
+
+        .circle {
+            @include Circle();
+
+            .innercircle {
+                @include innerCircle();
+            }
+
+        }
+
+        input {
+            padding: 10px 0;
+            background-color: transparent;
+            border: 0;
+            outline: none;
+            font-size: 17px;
+            width: 100%;
+            color: white;
+            font-family: 'Josefin Sans';
+        }
+    }
+}
+
+main {
+    .todos {
+        // width: 35%;
+        border-radius: 8px;
+
+        .todo {
+            padding: 15px 5px;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: 0.5s background-color ease;
+
+
+            .todoWrapper {
+                display: flex;
+                align-items: center;
+            }
+
+            .circle {
+                @include Circle();
+
+                .innercircle {
+                    @include innerCircle();
+                }
+            }
+
+            p {
+
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+            p.complete {
+                text-decoration: line-through;
+                opacity: 0.5;
+            }
+
+            .crossIcon {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .mobileview {
+
+        justify-content: space-between;
+        padding: 15px;
+        transition: 0.5s background-color ease;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        display: none;
+
+        span {
+            color: $Dark-Grayish-Blue;
+        }
+    }
+
+    .menu {
+        // width: 35%;
+        transition: 0.5s background-color ease;
+
+        .items {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+
+            span {
+                color: $Dark-Grayish-Blue;
+            }
+
+            span:hover {
+                color: $Light-Grayish-Blue-hover;
+                transition: 0.2s color ease;
+            }
+
+            .remtask {
+                span {
+                    margin: 0 5px;
+                    cursor: pointer;
+                }
+
+                span.active {
+                    color: $Bright-Blue;
+                }
+            }
+
+            .clear {
+                cursor: pointer;
+            }
+
+        }
+
+    }
+}
+
+.circle.active .innercircle {
+    opacity: 1 !important;
+    transition: 0.2s opacity ease !important;
+}
+
+.todo.dragging {
+    opacity: 0.5;
+}
+
+@media (max-width:600px) {
+    nav {
+        width: 400px !important;
+    }
+
+    .wrapper {
+        width: 400px !important;
+    }
+
+    .items {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .mobileview {
+        display: flex !important;
+    }
+
+    .menu {
+        .numoftodos {
+            display: none !important;
+        }
+
+        .clear {
+            display: none !important;
+        }
+    }
+
+}
+
+@media (max-width:420px) {
+
+    nav {
+        width: 300px !important;
+    }
+
+    .wrapper {
+        width: 300px !important;
+    }
+}
+
+@media (max-width:330px) {
+
+    nav {
+        width: 250px !important;
+    }
+
+    .wrapper {
+        width: 250px !important;
+    }
+
+    .mobileview {
+        span {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    width: 100%;
+    color: black;
+}

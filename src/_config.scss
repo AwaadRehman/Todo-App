@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+// Dark Mode
+$Bright-Blue: hsl(220, 98%, 61%);
+$very-Dark-Blue: hsl(235, 21%, 11%);
+$very-DarkDesaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$very-DarkGrayish-Blue: hsl(233, 14%, 35%);
+$very-DarkGrayish-Blue: hsl(237, 14%, 26%);
+
+// light mode
+$LVery-LightGray: hsl(0, 0%, 98%);
+$LVery-Light-Grayish-Blue: hsl(236, 33%, 92%);
+$LLight-Grayish-Blue: hsl(233, 11%, 84%);
+$LDark-Grayish-Blue: hsl(236, 9%, 61%);
+$LVery-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+@mixin Circle {
+    border: 1px solid $Dark-Grayish-Blue;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    margin-right: 15px;
+}
+
+@mixin innerCircle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translateX(0.25px);
+    opacity: 0;
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
