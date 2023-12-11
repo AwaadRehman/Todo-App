@@ -30,7 +30,7 @@ function creatingTodos(todoInput) {
     circle.appendChild(innerCircle)
 
     let img = new Image()
-    img.src = 'images/icon-check.svg'
+    img.src = 'build/images/icon-check.svg'
     innerCircle.appendChild(img)
 
     let p = document.createElement('p')
@@ -40,7 +40,7 @@ function creatingTodos(todoInput) {
     let crDiv = document.createElement('div')
     let crossImg = new Image()
     crossImg.classList.add('crossIcon')
-    crossImg.src = 'images/icon-cross.svg'
+    crossImg.src = 'build/images/icon-cross.svg'
     crDiv.appendChild(crossImg)
     todo.appendChild(crDiv)
 
