@@ -58,7 +58,7 @@ body.light {
   width: 100%;
 }
 body.light header {
-  background: url("build/images/bg-desktop-light.jpg");
+  background: url("/Todo-App/build/images/bg-desktop-light.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -88,7 +88,7 @@ body.light main .menu {
 }
 @media (max-width: 600px) {
   body.light header {
-    background: url("/build/images/bg-mobile-light.jpg");
+    background: url("/Todo-App/build/images/bg-mobile-light.jpg");
     background-size: cover;
   }
 }
