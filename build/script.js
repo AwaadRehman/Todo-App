@@ -52,7 +52,6 @@ function creatingTodos(todoInput) {
             numoftodosEl.forEach(num => num.textContent = numberOfTodos + ' items left')
 
             let p = todo.children[0]
-            console.log(p)
             removeLocaltodos(p)
 
         }

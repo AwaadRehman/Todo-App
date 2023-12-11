@@ -4,11 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=https://AwaadRehman.github.io/Todo-App/build/index.html" />
+    <title>Document</title>
+    <link rel="stylesheet" href="build/css/style.css">
 </head>
 
-<body>
+<body class="dark">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>T O D O</h1>
+            </div>
+            <div class="toggle">
+                <img src="build/images/icon-moon.svg" alt="" class="moon">
+                <img src="build/images//icon-sun.svg" alt="" class="sun active">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="inputdiv">
+                <div class="circle">
+                    <div class="innercircle">
+                        <img src="build/images/icon-check.svg" alt="">
+                    </div>
+                </div>
+                <input type="text" placeholder="Create a new todo...">
+            </div>
+            <div class="todos">
+            </div>
+            <div class="mobileview todo">
+                <span class="numoftodos">0 items left</span>
+                <span class="clear">Clear Completed</span>
+            </div>
+            <div class="menu">
+                <div class="items">
+                    <span class="numoftodos">0 items left</span>
+                    <div class="remtask">
+                        <span class="active">All</span>
+                        <span>Active</span>
+                        <span class="completed">Completed</span>
+                    </div>
+                    <span class="clear">Clear Completed</span>
+                </div>
+            </div>
 
+        </div>
+    </main>
+    <div class="end"><span>Challenge by <a href="https://frontendmentor.io">Frontend Mentor</a> Completed by
+            Awaad</span></div>
+    <script src="build/script.js"></script>
 </body>
 
 </html>
