@@ -23,7 +23,7 @@ body.dark {
     color: white;
 
     header {
-        background: url('../build/images/bg-desktop-dark.jpg');
+        background: url('/Todo-App/build/images/bg-desktop-dark.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -59,7 +59,7 @@ body.dark {
 
     @media (max-width:600px) {
         header {
-            background: url('../build/images/bg-mobile-dark.jpg');
+            background: url('/Todo-App/build/images/bg-mobile-dark.jpg');
             background-size: cover;
 
         }
@@ -71,7 +71,7 @@ body.light {
     width: 100%;
 
     header {
-        background: url('../build/images/bg-desktop-light.jpg');
+        background: url('build/images/bg-desktop-light.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

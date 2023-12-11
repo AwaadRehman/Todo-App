@@ -21,7 +21,7 @@ body.dark {
   color: white;
 }
 body.dark header {
-  background: url("../build/images/bg-desktop-dark.jpg");
+  background: url("/Todo-App/build/images/bg-desktop-dark.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body.dark main .menu {
 }
 @media (max-width: 600px) {
   body.dark header {
-    background: url("../build/images/bg-mobile-dark.jpg");
+    background: url("/Todo-App/build/images/bg-mobile-dark.jpg");
     background-size: cover;
   }
 }
@@ -58,7 +58,7 @@ body.light {
   width: 100%;
 }
 body.light header {
-  background: url("../build/images/bg-desktop-light.jpg");
+  background: url("build/images/bg-desktop-light.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
